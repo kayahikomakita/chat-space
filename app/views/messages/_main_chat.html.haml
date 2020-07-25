@@ -9,7 +9,9 @@
         %li.RightHeader__member
           - @group.users.each do |user|
             = user.name
-    = link_to '#',class: "RightHeader__editButton" do
+    -# = link_to '#', class: "RightHeader__editButton" do
+      Edit
+    = link_to edit_group_path(@group), class: "RightHeader__editButton" do
       Edit
   .MessageField
     = render @messages
